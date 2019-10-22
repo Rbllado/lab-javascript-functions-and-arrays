@@ -43,12 +43,31 @@ findLongestWord(words);
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+var result=0;
+
+function sumArray(arr){
+  arr.forEach(function(element){
+    result =result + element;
+    });
+  console.log(result);
+  return result;
+}
+sumArray(numbers);
 
 // Calculate the Average
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+var avg = 0;
+
+function averageNumbers(){
+  avg = sumArray(numbersAvg)/2;
+  console.log(avg);
+}
+
+averageNumbers(numbersAvg);
 
 // Array of Strings
+
 var wordsArr = [
   'seat',
   'correspond',
@@ -61,6 +80,21 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
+
+avg = 0;
+
+function averageWordLength(wordsArr) {
+  wordsArr.forEach(function(element){
+    avg += element.length;
+    });
+    avg = avg / 2;
+
+    console.log(avg);
+}
+
+averageWordLength(wordsArr);
+
+
 
 // Unique Arrays
 var wordsUnique = [
@@ -77,7 +111,10 @@ var wordsUnique = [
   'bring'
 ];
 
-// Finding Elements
+function uniquifyArray(arr){
+
+}
+
 var wordsFind = [
   'machine',
   'subset',
@@ -88,6 +125,22 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+var word = "matter";
+var wordExist = false;
+
+function doesWordExist(arr, w1){
+  arr.forEach(function(element){
+    if(element === w1){
+      console.log(element, "It is ttrueee");
+       wordExist = true;
+    }
+    });
+    return wordExist;
+}
+
+doesWordExist(wordsFind, word);
+
 
 // Counting Repetion
 var wordsCount = [
